@@ -7,17 +7,21 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
-  mensajes: any[];
+  mensajes: any;
 
-  constructor(private DataService: DataService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.mensajes = this.DataService.getPost();
+    this.mensajes = this.dataService.getPost();
 
     // .subscribe((posts: any[]) => {
     //   console.log(posts);
 
     //   this.mensajes = posts;
     // });
+  }
+
+  escuchaClick(id) {
+    console.log('click en: ', id);
   }
 }

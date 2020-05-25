@@ -5,12 +5,8 @@ import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
 import { PostComponent } from './post/post.component';
 
-
 @NgModule({
   declarations: [PostsComponent, PostComponent],
-  imports: [
-    CommonModule,
-    PostsRoutingModule
-  ]
+  imports: [CommonModule, PostsRoutingModule],
 })
-export class PostsModule { }
+export class PostsModule {}
